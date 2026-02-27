@@ -1,0 +1,102 @@
+name: Microsoft Power Apps
+description: Microsoft Power Apps is a suite of apps, services, and connectors, as well as a data platform, that provides a rapid development environment to build custom apps for your business needs.
+image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
+url: https://powerapps.microsoft.com/
+created: '2024'
+modified: '2024'
+specificationVersion: '0.18'
+tags:
+- Low-Code
+- No-Code
+- Business Applications
+- App Development
+- Microsoft
+- Cloud Platform
+apis:
+- name: Power Apps REST API
+  description: The Power Apps REST API provides a unified endpoint to work with environments, apps, and related resources.
+  image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
+  humanURL: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
+  baseURL: https://api.powerapps.com
+  tags:
+  - Apps
+  - Environments
+  - Connections
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
+  - type: OpenAPI
+    url: https://learn.microsoft.com/en-us/connectors/powerappsforappmakers/
+  - type: Authentication
+    url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/authenticate-oauth
+- name: Microsoft Dataverse Web API
+  description: The Web API for Dataverse provides a development experience that can be used across a wide variety of programming languages, platforms, and devices.
+  image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
+  humanURL: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
+  baseURL: https://[org].api.crm.dynamics.com/api/data/v9.2
+  tags:
+  - Data Platform
+  - Dataverse
+  - OData
+  - CRUD Operations
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
+  - type: OpenAPI
+    url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/openapi
+  - type: Quick Start
+    url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/quick-start-console-app-csharp
+- name: Power Apps Management API
+  description: REST API for managing Power Apps environments, apps, flows, and connectors.
+  image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
+  humanURL: https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/
+  baseURL: https://api.bap.microsoft.com
+  tags:
+  - Administration
+  - Management
+  - Governance
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/power-platform/admin/programmability-authentication
+  - type: PowerShell Module
+    url: https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/
+- name: Power Apps Component Framework API
+  description: APIs for building custom components using the Power Apps Component Framework (PCF).
+  image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
+  humanURL: https://docs.microsoft.com/en-us/power-apps/developer/component-framework/overview
+  baseURL: https://pcf.tools
+  tags:
+  - Components
+  - Custom Controls
+  - PCF
+  - UI Framework
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/power-apps/developer/component-framework/reference/
+  - type: Samples
+    url: https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework
+  - type: Tutorial
+    url: https://docs.microsoft.com/en-us/power-apps/developer/component-framework/create-custom-controls-using-pcf
+common:
+- type: Portal
+  url: https://make.powerapps.com
+- type: Developer Center
+  url: https://powerapps.microsoft.com/en-us/developers/
+- type: Community
+  url: https://powerusers.microsoft.com/
+- type: Blog
+  url: https://powerapps.microsoft.com/en-us/blog/
+- type: Pricing
+  url: https://powerapps.microsoft.com/en-us/pricing/
+- type: Support
+  url: https://powerapps.microsoft.com/en-us/support/
+- type: Learning Path
+  url: https://docs.microsoft.com/en-us/learn/powerplatform/power-apps
+- type: GitHub Organization
+  url: https://github.com/microsoft/PowerApps-Samples
+- type: Status Page
+  url: https://status.powerplatform.microsoft.com/
+maintainers:
+- FN: Microsoft
+  email: support@microsoft.com
+  url: https://www.microsoft.com
