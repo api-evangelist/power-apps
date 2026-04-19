@@ -5,12 +5,12 @@ Microsoft Power Apps is a suite of apps, services, and connectors, as well as a 
 
 ## Tags:
 
- - Low-Code, No-Code, Business Applications, App Development, Microsoft, Cloud Platform
+ - App Development, Business Applications, Cloud Platform, Low-Code, Microsoft, No-Code
 
 ## Timestamps
 
-- **Created:** 2024 
-- **Modified:** 2024 
+- **Created:** 2024
+- **Modified:** 2026-04-18
 
 ## APIs
 
@@ -19,10 +19,9 @@ The Power Apps REST API provides a unified endpoint to work with environments, a
 
 **Human URL:** [https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview)
 
-
 #### Tags:
 
- - Apps, Environments, Connections
+ - Apps, Connections, Environments
 
 #### Properties
 
@@ -35,37 +34,38 @@ The Web API for Dataverse provides a development experience that can be used acr
 
 **Human URL:** [https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview)
 
-
 #### Tags:
 
- - Data Platform, Dataverse, OData, CRUD Operations
+ - CRUD Operations, Data Platform, Dataverse, OData
 
 #### Properties
 
 - [Documentation](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview)
 - [OpenAPI](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/openapi)
-- [Quick Start](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/quick-start-console-app-csharp)
+- [Quickstart](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/quick-start-console-app-csharp)
+- [APIReference](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/about)
+- [SDK](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/org-service/overview)
+- [DeveloperPortal](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/)
 
 ### Power Apps Management API
 REST API for managing Power Apps environments, apps, flows, and connectors.
 
 **Human URL:** [https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/](https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/)
 
-
 #### Tags:
 
- - Administration, Management, Governance
+ - Administration, Governance, Management
 
 #### Properties
 
 - [Documentation](https://docs.microsoft.com/en-us/power-platform/admin/programmability-authentication)
-- [PowerShell Module](https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/)
+- [SDK](https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/)
+- [GettingStarted](https://learn.microsoft.com/en-us/power-platform/admin/powerplatform-api-getting-started)
 
 ### Power Apps Component Framework API
 APIs for building custom components using the Power Apps Component Framework (PCF).
 
 **Human URL:** [https://docs.microsoft.com/en-us/power-apps/developer/component-framework/overview](https://docs.microsoft.com/en-us/power-apps/developer/component-framework/overview)
-
 
 #### Tags:
 
@@ -74,23 +74,71 @@ APIs for building custom components using the Power Apps Component Framework (PC
 #### Properties
 
 - [Documentation](https://docs.microsoft.com/en-us/power-apps/developer/component-framework/reference/)
-- [Samples](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)
-- [Tutorial](https://docs.microsoft.com/en-us/power-apps/developer/component-framework/create-custom-controls-using-pcf)
+- [CodeExamples](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)
+- [Tutorials](https://docs.microsoft.com/en-us/power-apps/developer/component-framework/create-custom-controls-using-pcf)
+
+### Microsoft Power Platform API
+The Power Platform API provides a unified REST endpoint for managing environments, licensing, app management, and tenant-level governance.
+
+**Human URL:** [https://learn.microsoft.com/en-us/rest/api/power-platform/](https://learn.microsoft.com/en-us/rest/api/power-platform/)
+
+#### Tags:
+
+ - App Management, Environments, Governance, Licensing, Platform API, Tenant Administration
+
+#### Properties
+
+- [Documentation](https://learn.microsoft.com/en-us/rest/api/power-platform/)
+- [GettingStarted](https://learn.microsoft.com/en-us/power-platform/admin/powerplatform-api-getting-started)
+- [Authentication](https://learn.microsoft.com/en-us/power-platform/admin/programmability-authentication-v2)
+- [SDK](https://www.nuget.org/packages/Microsoft.PowerPlatform.Management)
+
+### Model-Driven Apps Client API
+Client API reference for model-driven apps providing JavaScript libraries for form scripting, UI manipulation, and data access.
+
+**Human URL:** [https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference)
+
+#### Tags:
+
+ - Client API, Form Scripting, JavaScript, Model-Driven Apps, Xrm Object Model
+
+#### Properties
+
+- [Documentation](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference)
+- [GettingStarted](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/walkthrough-write-your-first-client-script)
+
+### Custom Connectors API
+Custom connectors allow you to create wrappers around REST or SOAP APIs for use in Power Apps, Power Automate, Logic Apps, and Copilot Studio.
+
+**Human URL:** [https://learn.microsoft.com/en-us/connectors/custom-connectors/](https://learn.microsoft.com/en-us/connectors/custom-connectors/)
+
+#### Tags:
+
+ - Connectors, Custom Connectors, Integration, OpenAPI, REST
+
+#### Properties
+
+- [Documentation](https://learn.microsoft.com/en-us/connectors/custom-connectors/)
+- [Tutorials](https://learn.microsoft.com/en-us/connectors/custom-connectors/define-blank)
 
 ## Common Properties
 
 - [Portal](https://make.powerapps.com)
-- [Developer Center](https://powerapps.microsoft.com/en-us/developers/)
-- [Community](https://powerusers.microsoft.com/)
+- [DeveloperPortal](https://powerapps.microsoft.com/en-us/developers/)
+- [Support](https://powerusers.microsoft.com/)
 - [Blog](https://powerapps.microsoft.com/en-us/blog/)
 - [Pricing](https://powerapps.microsoft.com/en-us/pricing/)
 - [Support](https://powerapps.microsoft.com/en-us/support/)
-- [Learning Path](https://docs.microsoft.com/en-us/learn/powerplatform/power-apps)
-- [GitHub Organization](https://github.com/microsoft/PowerApps-Samples)
-- [Status Page](https://status.powerplatform.microsoft.com/)
+- [Training](https://docs.microsoft.com/en-us/learn/powerplatform/power-apps)
+- [GitHubOrganization](https://github.com/microsoft/PowerApps-Samples)
+- [StatusPage](https://status.powerplatform.microsoft.com/)
+- [GettingStarted](https://learn.microsoft.com/en-us/power-platform/developer/get-started)
+- [Authentication](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/authentication)
+- [ChangeLog](https://learn.microsoft.com/en-us/power-platform/admin/programmability-whats-new-changed)
+- [Training](https://learn.microsoft.com/en-us/training/powerplatform/)
 
 ## Maintainers
 
-**FN:** Microsoft
+**FN:** Kin Lane
 
-**Email:** support@microsoft.com
+**Email:** kin@apievangelist.com
