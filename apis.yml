@@ -3,7 +3,7 @@ description: Microsoft Power Apps is a suite of apps, services, and connectors, 
 image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
 url: https://powerapps.microsoft.com/
 created: '2024'
-modified: '2026-04-18'
+modified: '2026-05-19'
 specificationVersion: '0.18'
 tags:
   - App Development
@@ -219,6 +219,12 @@ common:
       - Dynamics 365
       - SharePoint
       - SQL Server
+  - name: MCP Server
+    url: https://github.com/microsoft/powerbi-modeling-mcp
+    type: MCPServer
+  - name: Agent Skills
+    url: https://github.com/microsoft/power-platform-skills
+    type: AgentSkill
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
