@@ -2,8 +2,8 @@
   "repo": "power-apps",
   "feeds": [
     {
-      "source": "https://powerapps.microsoft.com/en-us/blog/feed/",
-      "feed_url": "https://powerapps.microsoft.com/en-us/blog/feed/",
+      "source": "https://www.microsoft.com/en-us/power-platform/blog/power-apps/feed/",
+      "feed_url": "https://www.microsoft.com/en-us/power-platform/blog/power-apps/feed/",
       "title": "",
       "saved": 0,
       "method": "feed"
@@ -17,5 +17,5 @@
     }
   ],
   "post_count": 19,
-  "fetched": "2026-06-01T23:35:02Z"
+  "fetched": "2026-06-14T20:42:17Z"
 }
