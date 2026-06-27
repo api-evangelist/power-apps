@@ -44,13 +44,13 @@ apis:
         url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
       - type: OpenAPI
         url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/openapi
-      - type: Quickstart
+      - type: GettingStarted
         url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/quick-start-console-app-csharp
       - type: APIReference
         url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/about
       - type: Documentation
         url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/web-api-types-operations
-      - type: SDK
+      - type: SDKs
         url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/org-service/overview
       - type: DeveloperPortal
         url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/
@@ -66,7 +66,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.microsoft.com/en-us/power-platform/admin/programmability-authentication
-      - type: SDK
+      - type: SDKs
         url: https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/
       - type: GettingStarted
         url: https://learn.microsoft.com/en-us/power-platform/admin/powerplatform-api-getting-started
@@ -112,7 +112,7 @@ apis:
         url: https://learn.microsoft.com/en-us/power-platform/admin/programmability-extensibility-overview
       - type: Documentation
         url: https://learn.microsoft.com/en-us/connectors/powerplatformadminv2/
-      - type: SDK
+      - type: SDKs
         url: https://www.nuget.org/packages/Microsoft.PowerPlatform.Management
   - name: Model-Driven Apps Client API
     description: Client API reference for model-driven apps providing JavaScript libraries for form scripting, UI manipulation, data access, and the Xrm object model including Xrm.WebApi for data operations.
@@ -224,7 +224,7 @@ common:
     type: MCPServer
   - name: Agent Skills
     url: https://github.com/microsoft/power-platform-skills
-    type: AgentSkill
+    type: AgentSkills
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
