@@ -155,6 +155,10 @@ apis:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/connectors/connector-reference/
 common:
+  - type: Authentication
+    url: authentication/power-apps-authentication.yml
+  - type: OAuthScopes
+    url: scopes/power-apps-scopes.yml
   - type: Portal
     url: https://make.powerapps.com
   - type: DeveloperPortal

@@ -1,0 +1,29 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/power-apps-openapi.yml
+schemes:
+- name: OAuth2
+  source: openapi/power-apps-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+    tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+  - flow: clientCredentials
+    tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+  description: |-
+    Authentication uses Microsoft Entra ID (Azure AD) OAuth 2.0. Acquire a
+    bearer token with the audience set to the Dataverse organization URL,
+    for example https://{organization}.crm.dynamics.com/.default.
+scopes:
+- scope: https://{organization}.crm.dynamics.com/.default
+  description: Application access to Dataverse
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/power-apps-openapi.yml
+- scope: https://{organization}.crm.dynamics.com/user_impersonation
+  description: Access Dataverse as the signed-in user
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/power-apps-openapi.yml
