@@ -155,6 +155,8 @@ apis:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/connectors/connector-reference/
 common:
+  - type: AgenticAccess
+    url: agentic-access/power-apps-agentic-access.yml
   - type: DomainSecurity
     url: security/power-apps-domain-security.yml
   - type: Authentication
