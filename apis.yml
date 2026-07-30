@@ -1,5 +1,18 @@
 name: Microsoft Power Apps
 description: Microsoft Power Apps is a suite of apps, services, and connectors, as well as a data platform, that provides a rapid development environment to build custom apps for your business needs.
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
 url: https://powerapps.microsoft.com/
 created: '2024'
@@ -13,147 +26,185 @@ tags:
   - Microsoft
   - No-Code
 apis:
-  - name: Power Apps REST API
-    description: The Power Apps REST API provides a unified endpoint to work with environments, apps, and related resources.
-    image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
-    humanURL: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
-    baseURL: https://api.powerapps.com
-    tags:
-      - Apps
-      - Connections
-      - Environments
-    properties:
-      - type: Documentation
-        url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
-      - type: OpenAPI
-        url: https://learn.microsoft.com/en-us/connectors/powerappsforappmakers/
-      - type: Authentication
-        url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/authenticate-oauth
-  - name: Microsoft Dataverse Web API
-    description: The Web API for Dataverse provides a development experience that can be used across a wide variety of programming languages, platforms, and devices.
-    image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
-    humanURL: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
-    baseURL: https://[org].api.crm.dynamics.com/api/data/v9.2
-    tags:
-      - CRUD Operations
-      - Data Platform
-      - Dataverse
-      - OData
-    properties:
-      - type: Documentation
-        url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
-      - type: OpenAPI
-        url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/openapi
-      - type: GettingStarted
-        url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/quick-start-console-app-csharp
-      - type: APIReference
-        url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/about
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/web-api-types-operations
-      - type: SDKs
-        url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/org-service/overview
-      - type: DeveloperPortal
-        url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/
-  - name: Power Apps Management API
-    description: REST API for managing Power Apps environments, apps, flows, and connectors.
-    image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
-    humanURL: https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/
-    baseURL: https://api.bap.microsoft.com
-    tags:
-      - Administration
-      - Governance
-      - Management
-    properties:
-      - type: Documentation
-        url: https://docs.microsoft.com/en-us/power-platform/admin/programmability-authentication
-      - type: SDKs
-        url: https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/
-      - type: GettingStarted
-        url: https://learn.microsoft.com/en-us/power-platform/admin/powerplatform-api-getting-started
-  - name: Power Apps Component Framework API
-    description: APIs for building custom components using the Power Apps Component Framework (PCF).
-    image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
-    humanURL: https://docs.microsoft.com/en-us/power-apps/developer/component-framework/overview
-    baseURL: https://pcf.tools
-    tags:
-      - Components
-      - Custom Controls
-      - PCF
-      - UI Framework
-    properties:
-      - type: Documentation
-        url: https://docs.microsoft.com/en-us/power-apps/developer/component-framework/reference/
-      - type: CodeExamples
-        url: https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework
-      - type: Tutorials
-        url: https://docs.microsoft.com/en-us/power-apps/developer/component-framework/create-custom-controls-using-pcf
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/power-apps/developer/component-framework/component-framework-for-canvas-apps
-  - name: Microsoft Power Platform API
-    description: The Power Platform API provides a unified REST endpoint at api.powerplatform.com for managing environments, licensing, app management, and tenant-level governance across the entire Power Platform.
-    image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
-    humanURL: https://learn.microsoft.com/en-us/rest/api/power-platform/
-    baseURL: https://api.powerplatform.com
-    tags:
-      - App Management
-      - Environments
-      - Governance
-      - Licensing
-      - Platform API
-      - Tenant Administration
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/power-platform/
-      - type: GettingStarted
-        url: https://learn.microsoft.com/en-us/power-platform/admin/powerplatform-api-getting-started
-      - type: Authentication
-        url: https://learn.microsoft.com/en-us/power-platform/admin/programmability-authentication-v2
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/power-platform/admin/programmability-extensibility-overview
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/connectors/powerplatformadminv2/
-      - type: SDKs
-        url: https://www.nuget.org/packages/Microsoft.PowerPlatform.Management
-  - name: Model-Driven Apps Client API
-    description: Client API reference for model-driven apps providing JavaScript libraries for form scripting, UI manipulation, data access, and the Xrm object model including Xrm.WebApi for data operations.
-    image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
-    humanURL: https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference
-    baseURL: https://[org].api.crm.dynamics.com
-    tags:
-      - Client API
-      - Form Scripting
-      - JavaScript
-      - Model-Driven Apps
-      - Xrm Object Model
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference
-      - type: GettingStarted
-        url: https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/walkthrough-write-your-first-client-script
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/client-scripting
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/get-started-web-api-client-side-javascript
-  - name: Custom Connectors API
-    description: Custom connectors allow you to create wrappers around REST or SOAP APIs for use in Power Apps, Power Automate, Logic Apps, and Copilot Studio, enabling integration with services not available as prebuilt connectors.
-    image: https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
-    humanURL: https://learn.microsoft.com/en-us/connectors/custom-connectors/
-    baseURL: https://[environment].api.powerapps.com
-    tags:
-      - Connectors
-      - Custom Connectors
-      - Integration
-      - OpenAPI
-      - REST
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/connectors/custom-connectors/
-      - type: Tutorials
-        url: https://learn.microsoft.com/en-us/connectors/custom-connectors/define-blank
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/connectors/custom-connectors/use-custom-connector-powerapps
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/connectors/connector-reference/
+- name: Power Apps Management API
+  description: REST API for managing Power Apps environments, apps, flows, and connectors.
+  image: >-
+    https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
+  humanURL: >-
+    https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/
+  baseURL: https://api.bap.microsoft.com
+  tags:
+  - Administration
+  - Governance
+  - Management
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/power-platform/admin/programmability-authentication
+  - type: SDKs
+    url: >-
+      https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/power-platform/admin/powerplatform-api-getting-started
+- name: Power Apps Component Framework API
+  description: APIs for building custom components using the Power Apps Component Framework (PCF).
+  image: >-
+    https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
+  humanURL: https://docs.microsoft.com/en-us/power-apps/developer/component-framework/overview
+  baseURL: https://pcf.tools
+  tags:
+  - Components
+  - Custom Controls
+  - PCF
+  - UI Framework
+  properties:
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/power-apps/developer/component-framework/reference/
+  - type: CodeExamples
+    url: https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework
+  - type: Tutorials
+    url: >-
+      https://docs.microsoft.com/en-us/power-apps/developer/component-framework/create-custom-controls-using-pcf
+  - type: Documentation
+    url: >-
+      https://learn.microsoft.com/en-us/power-apps/developer/component-framework/component-framework-for-canvas-apps
+- name: Microsoft Power Platform API
+  description: >-
+    The Power Platform API provides a unified REST endpoint at api.powerplatform.com for managing environments,
+    licensing, app management, and tenant-level governance across the entire Power Platform.
+  image: >-
+    https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
+  humanURL: https://learn.microsoft.com/en-us/rest/api/power-platform/
+  baseURL: https://api.powerplatform.com
+  tags:
+  - App Management
+  - Environments
+  - Governance
+  - Licensing
+  - Platform API
+  - Tenant Administration
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/power-platform/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/power-platform/admin/powerplatform-api-getting-started
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/power-platform/admin/programmability-authentication-v2
+  - type: Documentation
+    url: >-
+      https://learn.microsoft.com/en-us/power-platform/admin/programmability-extensibility-overview
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/connectors/powerplatformadminv2/
+  - type: SDKs
+    url: https://www.nuget.org/packages/Microsoft.PowerPlatform.Management
+- name: Model-Driven Apps Client API
+  description: >-
+    Client API reference for model-driven apps providing JavaScript libraries for form scripting, UI manipulation,
+    data access, and the Xrm object model including Xrm.WebApi for data operations.
+  image: >-
+    https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
+  humanURL: >-
+    https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference
+  baseURL: https://[org].api.crm.dynamics.com
+  tags:
+  - Client API
+  - Form Scripting
+  - JavaScript
+  - Model-Driven Apps
+  - Xrm Object Model
+  properties:
+  - type: Documentation
+    url: >-
+      https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference
+  - type: GettingStarted
+    url: >-
+      https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/walkthrough-write-your-first-client-script
+  - type: Documentation
+    url: >-
+      https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/client-scripting
+  - type: Documentation
+    url: >-
+      https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/get-started-web-api-client-side-javascript
+- name: Custom Connectors API
+  description: >-
+    Custom connectors allow you to create wrappers around REST or SOAP APIs for use in Power Apps, Power
+    Automate, Logic Apps, and Copilot Studio, enabling integration with services not available as prebuilt
+    connectors.
+  image: >-
+    https://powerusers.microsoft.com/t5/image/serverpage/image-id/98171i62B0C7ECED0A0B8B/image-size/large
+  humanURL: https://learn.microsoft.com/en-us/connectors/custom-connectors/
+  baseURL: https://[environment].api.powerapps.com
+  tags:
+  - Connectors
+  - Custom Connectors
+  - Integration
+  - OpenAPI
+  - REST
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/connectors/custom-connectors/
+  - type: Tutorials
+    url: https://learn.microsoft.com/en-us/connectors/custom-connectors/define-blank
+  - type: Documentation
+    url: >-
+      https://learn.microsoft.com/en-us/connectors/custom-connectors/use-custom-connector-powerapps
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/connectors/connector-reference/
+- aid: power-apps:power-apps-system-api
+  name: Microsoft Power Apps System API
+  description: System operations and functions exposed by the Web API.
+  humanURL: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
+  baseURL: https://api.powerapps.com
+  tags:
+  - System
+  properties:
+  - type: OpenAPI
+    url: openapi/power-apps-system-api-openapi.yml
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
+  - type: Authentication
+    url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/authenticate-oauth
+  - type: GettingStarted
+    url: >-
+      https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/quick-start-console-app-csharp
+  - type: APIReference
+    url: >-
+      https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/about
+  - type: Documentation
+    url: >-
+      https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/web-api-types-operations
+  - type: SDKs
+    url: >-
+      https://learn.microsoft.com/en-us/power-apps/developer/data-platform/org-service/overview
+  - type: DeveloperPortal
+    url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/
+- aid: power-apps:power-apps-tables-api
+  name: Microsoft Power Apps Tables API
+  description: CRUD operations against Dataverse tables (entities).
+  humanURL: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
+  baseURL: https://api.powerapps.com
+  tags:
+  - Tables
+  properties:
+  - type: OpenAPI
+    url: openapi/power-apps-tables-api-openapi.yml
+  - type: Documentation
+    url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
+  - type: Authentication
+    url: https://docs.microsoft.com/en-us/power-apps/developer/data-platform/authenticate-oauth
+  - type: GettingStarted
+    url: >-
+      https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/quick-start-console-app-csharp
+  - type: APIReference
+    url: >-
+      https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/about
+  - type: Documentation
+    url: >-
+      https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/web-api-types-operations
+  - type: SDKs
+    url: >-
+      https://learn.microsoft.com/en-us/power-apps/developer/data-platform/org-service/overview
+  - type: DeveloperPortal
+    url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/
 common:
   - type: AgenticAccess
     url: agentic-access/power-apps-agentic-access.yml
