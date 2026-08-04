@@ -1,0 +1,206 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Dataverse Web API (Power Apps)
+  description: |
+    The Microsoft Dataverse Web API is a RESTful, OData v4 interface used by
+    Power Apps and Dynamics 365 to interact with Dataverse data. This
+    definition captures a representative subset of common operations
+    (WhoAmI, table CRUD on accounts, $batch). The Web API base URL is
+    organization-specific.
+    Derived from https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview.
+  version: "9.2"
+  contact:
+    name: Microsoft Power Apps
+    url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
+servers:
+  - url: https://{organization}.crm.dynamics.com/api/data/v9.2
+    description: Dataverse Web API endpoint for a specific organization
+    variables:
+      organization:
+        default: org
+        description: Your Dataverse organization subdomain
+security:
+  - OAuth2: []
+tags:
+  - name: System
+    description: System operations and functions exposed by the Web API.
+  - name: Tables
+    description: CRUD operations against Dataverse tables (entities).
+paths:
+  /WhoAmI:
+    get:
+      tags: [System]
+      summary: Get the current user information
+      description: Returns the BusinessUnitId, UserId, and OrganizationId of the calling user.
+      operationId: whoAmI
+      responses:
+        '200':
+          description: WhoAmIResponse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  BusinessUnitId:
+                    type: string
+                    format: uuid
+                  UserId:
+                    type: string
+                    format: uuid
+                  OrganizationId:
+                    type: string
+                    format: uuid
+  /accounts:
+    get:
+      tags: [Tables]
+      summary: Retrieve accounts
+      description: Returns a collection of account records. Supports OData query options ($select, $filter, $top, $orderby).
+      operationId: listAccounts
+      parameters:
+        - name: $select
+          in: query
+          schema:
+            type: string
+        - name: $filter
+          in: query
+          schema:
+            type: string
+        - name: $top
+          in: query
+          schema:
+            type: integer
+        - name: $orderby
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Account collection
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '@odata.context':
+                    type: string
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Account'
+    post:
+      tags: [Tables]
+      summary: Create an account
+      operationId: createAccount
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Account'
+      responses:
+        '204':
+          description: Account created; OData-EntityId header returns the new record URI.
+  /accounts({accountid}):
+    parameters:
+      - $ref: '#/components/parameters/AccountId'
+    get:
+      tags: [Tables]
+      summary: Retrieve an account by id
+      operationId: getAccount
+      responses:
+        '200':
+          description: The account record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+    patch:
+      tags: [Tables]
+      summary: Update an account
+      operationId: updateAccount
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Account'
+      responses:
+        '204':
+          description: Account updated
+    delete:
+      tags: [Tables]
+      summary: Delete an account
+      operationId: deleteAccount
+      responses:
+        '204':
+          description: Account deleted
+  /$batch:
+    post:
+      tags: [System]
+      summary: Execute batch operations
+      description: Submit multiple operations or change sets in a single multipart batch request.
+      operationId: batch
+      requestBody:
+        required: true
+        content:
+          multipart/mixed:
+            schema:
+              type: string
+      responses:
+        '200':
+          description: Batch response
+          content:
+            multipart/mixed:
+              schema:
+                type: string
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      description: |
+        Authentication uses Microsoft Entra ID (Azure AD) OAuth 2.0. Acquire a
+        bearer token with the audience set to the Dataverse organization URL,
+        for example https://{organization}.crm.dynamics.com/.default.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            'https://{organization}.crm.dynamics.com/user_impersonation': Access Dataverse as the signed-in user
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            'https://{organization}.crm.dynamics.com/.default': Application access to Dataverse
+  parameters:
+    AccountId:
+      name: accountid
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+      description: Primary key (GUID) of the account record.
+  schemas:
+    Account:
+      type: object
+      properties:
+        accountid:
+          type: string
+          format: uuid
+        name:
+          type: string
+        telephone1:
+          type: string
+        emailaddress1:
+          type: string
+        websiteurl:
+          type: string
+          format: uri
+        revenue:
+          type: number
+        createdon:
+          type: string
+          format: date-time
+        modifiedon:
+          type: string
+          format: date-time

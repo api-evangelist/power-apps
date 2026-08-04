@@ -1,0 +1,16 @@
+{
+  "provider": "power-apps",
+  "sources": [
+    "power-apps-system-api-openapi.yml",
+    "power-apps-tables-api-openapi.yml"
+  ],
+  "outputs": [
+    "power-apps-system-api-openapi.yml",
+    "power-apps-tables-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
