@@ -1,0 +1,257 @@
+{
+  "item": [
+    {
+      "id": "17f9215c-6014-4e71-8e8c-a67187320e57",
+      "name": "System",
+      "description": {
+        "content": "System operations and functions exposed by the Web API.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4985cddc-8a31-427c-a5a4-fac09b8d6b50",
+          "name": "Get the current user information",
+          "request": {
+            "name": "Get the current user information",
+            "description": {
+              "content": "Returns the BusinessUnitId, UserId, and OrganizationId of the calling user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "WhoAmI"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your Dataverse organization subdomain",
+                  "type": "any",
+                  "value": "{{organization}}",
+                  "key": "organization"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "547daa0e-1b1a-4289-aa7d-fc8ee7e6309e",
+              "name": "WhoAmIResponse",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "WhoAmI"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your Dataverse organization subdomain",
+                      "type": "any",
+                      "value": "{{organization}}",
+                      "key": "organization"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"BusinessUnitId\": \"46419aa8-b479-9f0a-feb6-c53fd6555061\",\n  \"UserId\": \"d9f3dc4f-da26-dba1-21ba-534ea48075b8\",\n  \"OrganizationId\": \"3b7e48be-0cd0-5a1d-16c4-7771a21f603d\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f5589f81-c35b-4ed1-bc75-19497ee2d318",
+          "name": "Execute batch operations",
+          "request": {
+            "name": "Execute batch operations",
+            "description": {
+              "content": "Submit multiple operations or change sets in a single multipart batch request.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "$batch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your Dataverse organization subdomain",
+                  "type": "any",
+                  "value": "{{organization}}",
+                  "key": "organization"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/mixed"
+              },
+              {
+                "key": "Accept",
+                "value": "multipart/mixed"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<string>"
+            }
+          },
+          "response": [
+            {
+              "id": "b7a3b33b-9ceb-4384-a5f8-394dd079f87c",
+              "name": "Batch response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "$batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your Dataverse organization subdomain",
+                      "type": "any",
+                      "value": "{{organization}}",
+                      "key": "organization"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "multipart/mixed"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<string>"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "multipart/mixed"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Your Dataverse organization subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "org",
+      "key": "organization"
+    },
+    {
+      "type": "string",
+      "value": "https://{{organization}}.crm.dynamics.com/api/data/v9.2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://{organization}.crm.dynamics.com/user_impersonation"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "fb5eb4af-79cb-4e55-87ac-a54b057b5a8f",
+    "name": "Microsoft Dataverse Web API (Power Apps) System API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Microsoft Dataverse Web API is a RESTful, OData v4 interface used by\nPower Apps and Dynamics 365 to interact with Dataverse data. This\ndefinition captures a representative subset of common operations\n(WhoAmI, table CRUD on accounts, $batch). The Web API base URL is\norganization-specific.\nDerived from https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview.\n\n\nContact Support:\n Name: Microsoft Power Apps",
+      "type": "text/plain"
+    }
+  }
+}

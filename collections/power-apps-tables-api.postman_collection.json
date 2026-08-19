@@ -1,0 +1,574 @@
+{
+  "item": [
+    {
+      "id": "d0dae754-84cd-490f-ba50-e6eb65e29c5a",
+      "name": "Tables",
+      "description": {
+        "content": "CRUD operations against Dataverse tables (entities).",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e2fe912d-d670-428d-aef0-c3f74326391f",
+          "name": "Retrieve accounts",
+          "request": {
+            "name": "Retrieve accounts",
+            "description": {
+              "content": "Returns a collection of account records. Supports OData query options ($select, $filter, $top, $orderby).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "$select",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "$filter",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "$top",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "$orderby",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Your Dataverse organization subdomain",
+                  "type": "any",
+                  "value": "{{organization}}",
+                  "key": "organization"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "815b35c7-105f-4a3d-b4c0-7e78a71ec304",
+              "name": "Account collection",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$select",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "$filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "$top",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "$orderby",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Your Dataverse organization subdomain",
+                      "type": "any",
+                      "value": "{{organization}}",
+                      "key": "organization"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"@odata.context\": \"string\",\n  \"value\": [\n    {\n      \"accountid\": \"59567a5d-7191-7246-f1e4-c1f9c7b5d940\",\n      \"name\": \"string\",\n      \"telephone1\": \"string\",\n      \"emailaddress1\": \"string\",\n      \"websiteurl\": \"https://hYCfbFDkcvkY.hbypQXhjlxDiL\",\n      \"revenue\": 7429.415253545651,\n      \"createdon\": \"1947-09-09T10:35:33.901Z\",\n      \"modifiedon\": \"1998-10-12T05:42:49.957Z\"\n    },\n    {\n      \"accountid\": \"296927e2-3058-d76a-1fa6-0e030aae32b3\",\n      \"name\": \"string\",\n      \"telephone1\": \"string\",\n      \"emailaddress1\": \"string\",\n      \"websiteurl\": \"https://CGDZpnZfOlistiqjeWs.airaxuv\",\n      \"revenue\": 7761.249745964392,\n      \"createdon\": \"1952-07-21T12:41:19.982Z\",\n      \"modifiedon\": \"1980-05-05T23:14:04.143Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bdce7589-1bfa-424c-8563-ce7bdbc9a345",
+          "name": "Create an account",
+          "request": {
+            "name": "Create an account",
+            "description": {},
+            "url": {
+              "path": [
+                "accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your Dataverse organization subdomain",
+                  "type": "any",
+                  "value": "{{organization}}",
+                  "key": "organization"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"accountid\": \"<uuid>\",\n  \"name\": \"<string>\",\n  \"telephone1\": \"<string>\",\n  \"emailaddress1\": \"<string>\",\n  \"websiteurl\": \"<uri>\",\n  \"revenue\": \"<number>\",\n  \"createdon\": \"<dateTime>\",\n  \"modifiedon\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6b80c18c-b7bb-47ed-aee7-63423858566b",
+              "name": "Account created; OData-EntityId header returns the new record URI.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your Dataverse organization subdomain",
+                      "type": "any",
+                      "value": "{{organization}}",
+                      "key": "organization"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountid\": \"<uuid>\",\n  \"name\": \"<string>\",\n  \"telephone1\": \"<string>\",\n  \"emailaddress1\": \"<string>\",\n  \"websiteurl\": \"<uri>\",\n  \"revenue\": \"<number>\",\n  \"createdon\": \"<dateTime>\",\n  \"modifiedon\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "851948cd-3826-4a5d-a4fe-d34a5a014167",
+          "name": "Retrieve an account by id",
+          "request": {
+            "name": "Retrieve an account by id",
+            "description": {},
+            "url": {
+              "path": [
+                "accounts({{accountid}})"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your Dataverse organization subdomain",
+                  "type": "any",
+                  "value": "{{organization}}",
+                  "key": "organization"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b4bf9209-5fa8-41c1-94de-2790ac60730e",
+              "name": "The account record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts({{accountid}})"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your Dataverse organization subdomain",
+                      "type": "any",
+                      "value": "{{organization}}",
+                      "key": "organization"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"accountid\": \"6f805ee5-ee6e-42d1-05d6-d918f79478cf\",\n  \"name\": \"string\",\n  \"telephone1\": \"string\",\n  \"emailaddress1\": \"string\",\n  \"websiteurl\": \"https://uLnMPJdmECGvtpVuO.hqHjwWqzpoWZtiz\",\n  \"revenue\": 6028.0556943898955,\n  \"createdon\": \"1994-09-25T15:10:14.553Z\",\n  \"modifiedon\": \"1971-03-25T14:08:44.973Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3b4496dd-cbad-45a5-807a-938077b3586e",
+          "name": "Update an account",
+          "request": {
+            "name": "Update an account",
+            "description": {},
+            "url": {
+              "path": [
+                "accounts({{accountid}})"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your Dataverse organization subdomain",
+                  "type": "any",
+                  "value": "{{organization}}",
+                  "key": "organization"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"accountid\": \"<uuid>\",\n  \"name\": \"<string>\",\n  \"telephone1\": \"<string>\",\n  \"emailaddress1\": \"<string>\",\n  \"websiteurl\": \"<uri>\",\n  \"revenue\": \"<number>\",\n  \"createdon\": \"<dateTime>\",\n  \"modifiedon\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "aaed2305-f923-4bd7-a6c1-08f60e42c8b7",
+              "name": "Account updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts({{accountid}})"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your Dataverse organization subdomain",
+                      "type": "any",
+                      "value": "{{organization}}",
+                      "key": "organization"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountid\": \"<uuid>\",\n  \"name\": \"<string>\",\n  \"telephone1\": \"<string>\",\n  \"emailaddress1\": \"<string>\",\n  \"websiteurl\": \"<uri>\",\n  \"revenue\": \"<number>\",\n  \"createdon\": \"<dateTime>\",\n  \"modifiedon\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b2c08007-e28b-4367-8976-72ec990cfd60",
+          "name": "Delete an account",
+          "request": {
+            "name": "Delete an account",
+            "description": {},
+            "url": {
+              "path": [
+                "accounts({{accountid}})"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your Dataverse organization subdomain",
+                  "type": "any",
+                  "value": "{{organization}}",
+                  "key": "organization"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "74e01ff3-997c-48c0-b193-b945384d5095",
+              "name": "Account deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "accounts({{accountid}})"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your Dataverse organization subdomain",
+                      "type": "any",
+                      "value": "{{organization}}",
+                      "key": "organization"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Your Dataverse organization subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "org",
+      "key": "organization"
+    },
+    {
+      "type": "string",
+      "value": "https://{{organization}}.crm.dynamics.com/api/data/v9.2",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Primary key (GUID) of the account record.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<uuid>",
+      "key": "accountid"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://{organization}.crm.dynamics.com/user_impersonation"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8757fa3f-ee3c-47c8-a362-b451b62ce6b6",
+    "name": "Microsoft Dataverse Web API (Power Apps) System Tables API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Microsoft Dataverse Web API is a RESTful, OData v4 interface used by\nPower Apps and Dynamics 365 to interact with Dataverse data. This\ndefinition captures a representative subset of common operations\n(WhoAmI, table CRUD on accounts, $batch). The Web API base URL is\norganization-specific.\nDerived from https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview.\n\n\nContact Support:\n Name: Microsoft Power Apps",
+      "type": "text/plain"
+    }
+  }
+}
