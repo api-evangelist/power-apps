@@ -218,6 +218,8 @@ apis:
   - type: DeveloperPortal
     url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/
 common:
+  - type: Website
+    url: https://www.microsoft.com/
   - type: AgenticAccess
     url: agentic-access/power-apps-agentic-access.yml
   - type: DomainSecurity
